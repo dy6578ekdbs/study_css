@@ -1,0 +1,51 @@
+.grid{
+   
+    display: grid;
+
+    
+    gap: 5px;
+    height: 50vh;
+
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    /*justify-content: center;
+    align-content: space-around;*/
+
+   /* place-content: center center;*/
+
+    /*content는 통채, item은 cell하나하나*/
+
+    /*justify-items: center;
+    align-items: center;*/
+
+    /*stretch 한 칸을 늘려서 채우게 함, 기본값임*/
+    /*justify는 가로, align은 세로*/
+    /*글자 내용 없으면 사라짐, 높이 너비가 없어서*/
+
+    /*place-items: stretch center; */
+    /*세로, 가로*/
+
+
+}
+
+.header{
+    background: chartreuse;
+    /*align-self: end;
+    justify-self: center;*/
+    place-self: end center;
+  
+}
+
+.content{
+    background: coral;
+ 
+}
+
+.nav{
+    background: cornflowerblue;
+}
+
+.footer{
+    background: darkkhaki;
+  
+}

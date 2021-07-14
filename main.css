@@ -1,0 +1,63 @@
+.grid{
+    display: grid;
+    /*grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px  300px  300px 300px;*/
+
+    /*grid-template-columns: repeat(4, 200px);*auto 넣으면 다 차지
+    grid-template-rows: 100px repeat(2, 200px) 100px; */
+
+    /*grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";*/
+
+    grid-template:/*여기선 repeat 못쓴다*/
+    "header header header header" 1fr
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr/*height*/ / 1fr 1fr 1fr 1fr/*width*/ ;
+
+
+
+   /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);*/
+
+    gap: 5px;
+    height: 50vh;
+
+    /* grid 높이 설정 안하고 둘다 1fr 1fr해버리면 그냥 납작~아무것도 안생김 왜냐면 공간이 아예 없으니까.*/
+
+    /* fr이란, 가능한 공간 안에서 얼만큼 차지 할 것인가 하는 비율*/
+}
+
+.header{
+    background: chartreuse;
+   /* grid-column-start: 1; 
+    grid-column-end: 5;*/
+
+    /*grid-column: 1/ -1;*/
+    /*grid-column: 1 / span 4; /*n부터 시작해 cell m개 차지*/
+    grid-area: header;
+}
+
+.content{
+    background: coral;
+  /*  grid-column: span 3;
+    grid-row:2/span 2;*/
+
+    
+    grid-area: content;
+}
+
+.nav{
+    background: cornflowerblue;
+   /* grid-row: 2 / span 2;*/
+
+    grid-area: nav;
+}
+
+.footer{
+    background: darkkhaki;
+    /*grid-column: span 4;*/
+    grid-area: footer;
+}
